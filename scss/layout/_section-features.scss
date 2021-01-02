@@ -1,0 +1,71 @@
+/* ==|====================
+   Layout/Features
+   ======================= */
+#features {
+  height: auto;
+  background: #f3f4f6;
+  @include flex-center;
+}
+
+.features__container {
+  height: 100%;
+  padding: 108px 0 108px;
+  h2 {
+    color: hsl(233, 26%, 24%);
+    font-size: 35px;
+    font-weight: 100;
+  }
+  p {
+    max-width: 615px;
+    line-height: 30px;
+    margin-top: 30px;
+    color: hsl(233, 8%, 62%);
+  }
+}
+
+.features__container-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
+.list__container {
+  margin-top: 30px;
+  width: 265px;
+  h3 {
+    margin-top: 20px;
+    color: hsl(233, 26%, 24%);
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 619px) {
+  .features__container {
+    justify-content: center;
+    h2 {
+      text-align: center;
+    }
+    .features__p {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  .list__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .features__container {
+    p {
+      max-width: none;
+    }
+  }
+}

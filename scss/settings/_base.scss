@@ -3,9 +3,46 @@
    =========================== */
 
 html {
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-   background-color: red;
+  font-family: $font-primary;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.width {
+  width: 90%;
+  max-width: 1100px;
+}
+
+//Button
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(49, 211, 92);
+  background: linear-gradient(
+    82deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 81%
+  );
+  width: 160px;
+  height: 45px;
+  border-radius: 9999px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 15px;
+  &:hover {
+    background: rgb(49, 211, 92);
+    background: linear-gradient(
+      82deg,
+      rgba(49, 211, 92, 0.3897934173669467) 0%,
+      rgba(43, 183, 218, 0.47942927170868344) 81%
+    );
+  }
 }

@@ -2,11 +2,13 @@
 @import "settings/site-settings";
 @import "settings/base";
 @import "settings/_reset.scss";
+@import "settings/_mixins.scss";
 
 /* Layouts */
 @import "layout/_nav.scss";
 @import "layout/_header.scss";
+@import "layout/_section-features.scss";
+@import "layout/_section-articles.scss";
 @import "layout/_footer.scss";
 
 /* Modules */
-@import "modules/_menu-hamburger.scss";

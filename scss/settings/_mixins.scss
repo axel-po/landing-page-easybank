@@ -1,0 +1,23 @@
+/* ===========================
+   Mixins
+   =========================== */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center-element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@mixin color-gradient {
+  background: rgb(49, 211, 92);
+  background: linear-gradient(
+    82deg,
+    rgba(49, 211, 92, 1) 0%,
+    rgba(43, 183, 218, 1) 81%
+  );
+}

@@ -2,3 +2,125 @@
    Layout/Header
    ======================= */
 
+#header {
+  background: hsl(0, 0%, 98%);
+  height: 658px;
+  padding-top: 75px;
+  @include flex-center;
+}
+
+.header__container {
+  @include flex-center;
+  height: 50%;
+}
+
+.header__container-left {
+  width: 100%;
+  h1 {
+    color: hsl(233, 26%, 24%);
+    font-size: 50px;
+    font-weight: 100;
+  }
+  p {
+    margin-top: 20px;
+    color: hsl(233, 8%, 62%);
+    line-height: 30px;
+    max-width: 509px;
+  }
+  .btn--header {
+    margin-top: 30px;
+  }
+}
+
+.header__container-right {
+  @include flex-center;
+  position: absolute;
+  right: 0;
+  top: -156px;
+  background: url("/images/bg-intro-desktop.svg") no-repeat;
+  height: 100%;
+  width: 50%;
+  min-height: 1000px;
+}
+
+@media screen and (max-width: 1100px) {
+  .header__container-right {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 919px) {
+  #header {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 90px;
+  }
+  .header__container {
+    flex-direction: column-reverse;
+    height: auto;
+    width: 100% !important;
+  }
+  .header__container-left {
+    @include flex-center;
+    flex-direction: column;
+    width: 90%;
+    p {
+      text-align: center;
+    }
+  }
+  .header__container-right {
+    position: static;
+    height: 650px;
+    width: 100%;
+    min-height: 89px;
+    background: url("/images/bg-intro-mobile.svg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    img {
+      position: absolute;
+      top: 0px;
+      width: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 827px) {
+  .header__gradient.active {
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #2d314d, transparent);
+  }
+}
+
+//Iphone X
+@media screen and (max-width: 416px) {
+  .header__container-left {
+    h1 {
+      font-size: 42px;
+    }
+  }
+  .header__container-right {
+    height: 450px;
+  }
+}
+
+//Iphone 6-7-8
+@media screen and (max-width: 379px) {
+  .header__container-left {
+    h1 {
+      font-size: 37px;
+    }
+  }
+}
+
+//Iphone 5
+@media screen and (max-width: 320px) {
+  .header__container-left {
+    h1 {
+      font-size: 33px;
+    }
+  }
+}
